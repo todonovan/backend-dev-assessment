@@ -10,7 +10,7 @@ We require all candidates to complete this assessment for a few reasons:
 
 > :question: If you have any questions along the way, you can contact [lenny@hireanesquire.com](mailto:lenny@hireanesquire.com). Please note that all code contained in this repository is provided as-is and we will not be able to provide any technical assistance for that.
 
-You are free to fork this repository to get started.
+You are welcome to copy or fork this repository to get started.
 
 > :clock4: We estimate that this assessment can take anywhere from 1-4 hours to complete, based on individual skill level and implementation details. If you are unable to find enough time or believe this is unreasonable, please let us know and we will do our best to accomodate you.
 
