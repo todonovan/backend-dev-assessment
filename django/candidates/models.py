@@ -23,3 +23,6 @@ class Candidate(models.Model):
 
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+    
+    def __unicode__(self):
+        return '{0} ({1})'.format(self.name, self.status)
