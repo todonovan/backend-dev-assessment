@@ -2,6 +2,14 @@ from rest_framework import serializers
 
 from candidates.models import Candidate
 
+"""
+Note: We may be able to replace all or nearly all of the
+below CandidateSerializer with this ModelSerializer (given 
+the addition of the necessary validators). Given the suggested
+time limit, I did not get a chance to fully test whether 
+the two would be equivalent. My guess is that it may not be
+worth it due to the custom logic required for the update method.
+
 class CandidateModelSerializer(serializers.ModelSerializer):
     class Meta:
         model = Candidate
@@ -9,7 +17,7 @@ class CandidateModelSerializer(serializers.ModelSerializer):
                   'status', 'date_applied', 'reviewed',
                   'description', 'created', 'updated')
         read_only_fields = ('id',)
-    
+"""    
     
 class CandidateSerializer(serializers.Serializer): 
     id = serializers.IntegerField(read_only = True)
@@ -40,7 +48,6 @@ class CandidateSerializer(serializers.Serializer):
         if instance.status == Candidate.PENDING:
             if updated_status == Candidate.REJECTED or updated_status == Candidate.ACCEPTED:
                 instance.reviewed = True
-                
         instance.status = updated_status
         
         instance.date_applied = validated_data.get('date_applied', instance.date_applied)
