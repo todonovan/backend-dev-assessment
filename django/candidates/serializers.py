@@ -68,6 +68,8 @@ class CandidateSerializer(serializers.Serializer):
         """
         Accepted candidates cannot be updated to rejected, and vice versa.
         """
+        if not self.instance:
+            return value
         if self.instance.status == Candidate.ACCEPTED:
             if value == Candidate.REJECTED:
                 raise serializers.ValidationError("Candidate status cannot be updated from accepted to rejected.")
