@@ -25,7 +25,7 @@ SECRET_KEY = '^9-%5u9+3f#^99w-heplyrf6(#3ubq_i)yw=g2p4b+h6j@@$oy'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['hire-an-esquire-todonovan.c9users.io']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'candidates',
 ]
 
